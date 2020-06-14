@@ -42,6 +42,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+closure is a variable that has a deeper scope trying to access the variable that has a shallower scope.
+
 2. Study the following code, then answer the questions below.
 
 ```js
