@@ -65,8 +65,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+closure here when function() inside personalDice() is trying to access the name variable which is a parameter that is in personalDice() function.
+i can tell because function() has an innerscope and it has a variable that is trying to access the name variable on an outer scope
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The string returns the same but the number value is different
 c. What is the lexical scope of `newRoll`? 
+lexical scope is basically an inner variable or function accessing an outer variable or function from a diff scope. 
+in this particular example name is being accessed not in the local scope of function() but inside of personalDice();
 
 ### Task 2c - Exit Ticket
 
