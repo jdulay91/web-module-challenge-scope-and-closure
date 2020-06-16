@@ -85,18 +85,24 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(numberOfInnings){
+function finalScore(numberOfInnings,callback){
   
      let score = {Home:0,Away:0}
      for(let i = 0; i<numberOfInnings;i++){
-       score.Home += inning();
-       score.Away = score.Away+inning()
-      //  console.log(score);
+       score.Home += callback();
+       score.Away += callback();     
      }   
     return score;
 }
-// console.log(finalScore(9))
-
+console.log(finalScore(9,inning))
+// function finalScore(numberOfInnings){
+//   let score = {Home:0,Away:0}
+//   for(let i = 0; i<numberOfInnings;i++){
+//     score.Home += inning();
+//     score.Away = score.Away+inning()      
+//   }   
+//  return score;
+// }
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
@@ -124,7 +130,7 @@ function scoreboard(func,number) {
   let team2 = 0;
   for(let i = 1; i<=number;i++){
     team1 += func();
-    team2+=func();
+    team2 += func();
    console.log(`Inning # ${i} : ${team1} - ${team2}`);
   }   
  return `Final Score: ${team1} - ${team2}`;
